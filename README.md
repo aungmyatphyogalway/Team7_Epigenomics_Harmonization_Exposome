@@ -21,4 +21,55 @@
 - **GEO (Gene Expression Omnibus):** DNA methylation datasets
 - **The Cancer Genome Atlas (TCGA):** Methylation array profiles
 
-![Epigenomics and Exposome Integration](image/exsome.png)
+
+## 🔍 Project Team Breakdown & Responsibilities
+
+To address the challenge of integrating disparate data types across epigenomics and the exposome, our team has been divided into three focused sub-teams with complementary roles:
+
+---
+
+### 🧠 Team A: Automate Epigenomics & Bioinformatics Data Acquisition
+
+**Goal:** Develop scripts and tools to automate the querying and downloading of publicly available epigenomic data.
+
+**Tasks:**
+- 🔗 Explore and utilize the **GEOSeq Bioconductor R package** for automated downloads from GEO (Gene Expression Omnibus).
+- 🧬 Automate the download of **high-throughput sequencing data** from the **NIH Epigenomics Roadmap**.
+
+> ✅ Output: A fully automated pipeline to gather high-quality epigenomic datasets for downstream analysis.
+
+---
+
+### 🧬 Team B: Bioinformatics Pipelines for Data Harmonization & Analytics
+
+**Goal:** Build robust pipelines to process and harmonize datasets from multiple sources.
+
+**Tasks:**
+- 🛠️ Design pipelines for processing **diverse epigenomic assay datasets**.
+- 🔄 Perform **harmonization** by integrating processed epigenomic data with **exposome datasets** and optionally **RNA-Seq data**.
+- 📊 Conduct downstream analyses such as:
+  - Gene Set Enrichment Analysis (**GSEA**)
+  - Gene Ontology (**GO**) analyses using **R**.
+
+> ✅ Output: A modular pipeline enabling end-to-end data integration and biological insight generation.
+
+---
+
+### 🧹 Team C(lean): Cleaning & Imputation of Public Exposome Data
+
+**Goal:** Handle preprocessing, cleaning, and integration of exposome datasets with epigenomic data.
+
+**Tasks:**
+- 📥 Download and import **NHANES `.xpt` files** and related exposome data from **TCGA** into Python or R.
+- 🧰 Build **custom tools** to streamline access to exposome datasets and **high-throughput sequencing data** from NIH's Epigenomics Roadmap.
+- 🔗 **Harmonize exposome data (Step 1)** and integrate it with epigenomic datasets (Step 2).
+
+> ✅ Output: Clean, imputed exposome data prepared for merging with epigenomic profiles, enabling rich integrative analysis.
+
+---
+
+### 🤝 Cross-Team Collaboration
+
+- 🔄 **Team A** provides raw data access pipelines to **Team B** and **Team C**.
+- 🧬 **Team B** builds the integrative analytics pipelines using processed datasets.
+- 🧹 **Team C** ensures exposome data is cleaned and harmonized for final integration.
