@@ -74,7 +74,8 @@ To address the challenge of integrating disparate data types across epigenomics 
 - 🧬 **Team B** builds the integrative analytics pipelines using processed datasets.
 - 🧹 **Team C** ensures exposome data is cleaned and harmonized for final integration.
 
-**Methoadology**
+**Methodology**
+
 -Step 1: C-PTAC-2-Proteomic data, RNA-Seq and MiRNA data collection (TARGET, Geospatial:JPSS (NOAA)
 Step 2a. Automate pulling these databases into our cleaning / imputation/ ML PYTHON script
 Step 2b. Code one kind of Bidirectional Recurrent Neural Network model, taking in input from C-PTAC-2, TARGET, and JSSS 
