@@ -5,6 +5,8 @@
 
 **How do we connect multiple disparate data types to obtain a meaningful understanding of the biological functions of an organism?**
 
+# --> What can I do with this repo? <-- 
+
 ## Publicly Available Epigenomic and Exposome Data Sets
 
 ### 🔬 Exposome Data Sets
@@ -20,6 +22,25 @@
 - **ENCODE:** Python-wrapped datasets available (high-throughput sequencing)
 - **GEO (Gene Expression Omnibus):** DNA methylation datasets
 - **The Cancer Genome Atlas (TCGA):** Methylation array profiles
+
+# How can I use this for other found data?
+## How do I use the pipeline
+``` Hello world! ```
+### Parameter usage
+### System requirements
+### Dependencies 
+### Example inputs
+### Example outputs
+
+# How can I use the existing data the team already processed?
+
+
+
+
+
+
+
+
 
 
 ## 🔍 Project Team Breakdown & Responsibilities
