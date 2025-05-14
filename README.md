@@ -118,13 +118,8 @@ For a visual representation of our process, you can view our [concept flowchart]
   - Ensure all steps are well-documented to allow for reproducibility of the results.
   - Include instructions for setting up the computational environment and running the analysis.
 
-## 👤 Contributors
-
-- Alishba Nadeem
 
 ## 👤 Contributors
-
-- Alishba Nadeem
 
 - Halina Krzystek
 - Kirtan Dave
