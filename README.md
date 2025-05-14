@@ -1,109 +1,135 @@
+# 🌐 Team7_EpiXposome
+## 🧬 Epigenomics_Harmonization_Exposome
 
-# Team7_Epigenomics_Harmonization_Exposome
+## 🔍 Key Features
 
-## The Challenge
+EpiXposome aims to decode the impact of environmental exposures on epigenetic changes using advanced machine learning. Our goal is to predict disease risks by revealing how exposome variables interact with epigenetic markers. This project promises to deliver actionable insights that could revolutionize disease prevention and treatment.
 
-**How do we connect multiple disparate data types to obtain a meaningful understanding of the biological functions of an organism?**
+## 📂 Datasets
 
-# --> What can I do with this repo? <-- 
+- **JPSS (NOAA)**: [NOAA Joint Polar Satellite System (JPSS)](https://registry.opendata.aws/noaa-jpss)
+- **TARGET**: [Therapeutically Applicable Research to Generate Effective Treatments (TARGET)](https://registry.opendata.aws/target)
+- **C-PTAC-2**: [Clinical Proteomic Tumor Analysis Consortium 2 (CPTAC-2)](https://registry.opendata.aws/cptac-2)
+- **TCGA**: [The Cancer Genome Atlas - Registry of Open Data on AWS](https://registry.opendata.aws/tcga)
+- **ENCODE**: [Encyclopedia of DNA Elements (ENCODE)](https://registry.opendata.aws/encode-project)
 
-## Publicly Available Epigenomic and Exposome Data Sets
+## 🔧 Parameter Usage
 
-### 🔬 Exposome Data Sets
-- **Exposome Correlation and Interpretation Database (ECID):** 250 publicly available datasets sourced from:
-  - NHANES (National Health and Nutrition Examination Survey)
-  - HHEAR
-  - Metabolomics WorkBench
-  - EBI Metabolights
-  - ECHO  
-- **NHANES:** Temporal `.xpt` files available for download
+### **Data Preprocessing Parameters**
+- `missing_data_threshold`
+- `normalization_method`
+- `batch_size
 
-### 🧬 Epigenomic Datasets / Databases
-- **ENCODE:** Python-wrapped datasets available (high-throughput sequencing)
-- **GEO (Gene Expression Omnibus):** DNA methylation datasets
-- **The Cancer Genome Atlas (TCGA):** Methylation array profiles
+### **Model Training Parameters**
+#### **Bidirectional RNNs (BRNNs) / BiLSTMs / GRUs**
+- `sequence_length` 
+- `hidden_units`
+- `dropout_rate`  
+- `learning_rate`
+- `epochs`
 
-# How can I use this for other found data?
-## How do I use the pipeline
-``` Hello world! ```
-### Parameter usage
-### System requirements
-### Dependencies 
-### Example inputs
-### Example outputs
-
-# How can I use the existing data the team already processed?
+## 💻 System Requirements
 
 
+- OS: Linux (Ubuntu, CentOS, Amazon Linux), macOS, or Windows 10 with WSL2.
+- CPU: Intel i5/i7 or AMD equivalent; multi-core recommended.
+- RAM: 16 GB minimum, 32 GB+ recommended.
+- Storage: 256 GB SSD minimum; more for large datasets.
+- Software: Python 3.6+, key libraries (numpy, pandas, scikit-learn), Jupyter.
 
 
+## 🔗 Dependencies
 
+- Python
+- BRNNs
+- Bidirectional LSTMs (BiLSTMs)
+- GRUs
+- RNNs
+- XGBoost
+- Genetic algorithm
+- Logistic regression models
+- JSSS
+- AWS CLI
 
-
-
-
-
-## 🔍 Project Team Breakdown & Responsibilities
-
-To address the challenge of integrating disparate data types across epigenomics and the exposome, our team has been divided into three focused sub-teams with complementary roles:
-
----
-
-### 🧠 Team A: Automate Epigenomics & Bioinformatics Data Acquisition
-
-**Goal:** Develop scripts and tools to automate the querying and downloading of publicly available epigenomic data.
-
-**Tasks:**
-- 🔗 Explore and utilize the **GEOSeq Bioconductor R package** for automated downloads from GEO (Gene Expression Omnibus).
-- 🧬 Automate the download of **high-throughput sequencing data** from the **NIH Epigenomics Roadmap**.
-
-> ✅ Output: A fully automated pipeline to gather high-quality epigenomic datasets for downstream analysis.
-
----
-
-### 🧬 Team B: Bioinformatics Pipelines for Data Harmonization & Analytics
-
-**Goal:** Build robust pipelines to process and harmonize datasets from multiple sources.
-
-**Tasks:**
-- 🛠️ Design pipelines for processing **diverse epigenomic assay datasets**.
-- 🔄 Perform **harmonization** by integrating processed epigenomic data with **exposome datasets** and optionally **RNA-Seq data**.
-- 📊 Conduct downstream analyses such as:
-  - Gene Set Enrichment Analysis (**GSEA**)
-  - Gene Ontology (**GO**) analyses using **R**.
-
-> ✅ Output: A modular pipeline enabling end-to-end data integration and biological insight generation.
-
----
-
-### 🧹 Team C(lean): Cleaning & Imputation of Public Exposome Data
-
-**Goal:** Handle preprocessing, cleaning, and integration of exposome datasets with epigenomic data.
-
-**Tasks:**
-- 📥 Download and import **NHANES `.xpt` files** and related exposome data from **TCGA** into Python or R.
-- 🧰 Build **custom tools** to streamline access to exposome datasets and **high-throughput sequencing data** from NIH's Epigenomics Roadmap.
-- 🔗 **Harmonize exposome data (Step 1)** and integrate it with epigenomic datasets (Step 2).
-
-> ✅ Output: Clean, imputed exposome data prepared for merging with epigenomic profiles, enabling rich integrative analysis.
-
----
-
-### 🤝 Cross-Team Collaboration
-
-- 🔄 **Team A** provides raw data access pipelines to **Team B** and **Team C**.
-- 🧬 **Team B** builds the integrative analytics pipelines using processed datasets.
-- 🧹 **Team C** ensures exposome data is cleaned and harmonized for final integration.
-
-**Methodology**
-
--Step 1: C-PTAC-2-Proteomic data, RNA-Seq and MiRNA data collection (TARGET, Geospatial:JPSS (NOAA)
-Step 2a. Automate pulling these databases into our cleaning / imputation/ ML PYTHON script
-Step 2b. Code one kind of Bidirectional Recurrent Neural Network model, taking in input from C-PTAC-2, TARGET, and JSSS 
-Step 2c.. ML code also to split the data into training and test data sets
-Step 3. Validation
+## 📥 Example Inputs
 
 
 
+## 📤 Example Outputs
 
-  
+
+## Steps
+
+1. **Step 1: Data Collection**
+   - Data Sources:
+     - miRNA expression data from CPTAC2 and TARGET
+     - DNA methylation data from TCGA, ENCODE, TARGET, and TCGA
+     - Exposome data from NOAA Joint Polar Satellite System (JPSS)
+
+2. **Step 2: Data Preprocessing**
+   - Clean and impute missing data for robust analysis.
+   - Prepare the data by addressing any quality control issues.
+
+3. **Step 3: Data Splitting**
+   - Randomly split the dataset into training (80%) and testing (20%) sets.
+
+4. **Step 4: Model Backoff and Selection**
+   - Explore a variety of Bidirectional Recurrent Neural Networks (BiRNNs) to compare performance.
+   - Consider other models like Artificial Neural Networks (ANNs), Long Short-Term Memory networks (LSTMs), and Gated Recurrent Units (GRUs) if necessary.
+
+5. **Step 5: Model Training**
+   - Train the selected machine learning model using the training dataset.
+
+6. **Step 6: Model Testing**
+   - Assess the model's performance using the testing dataset to validate its accuracy.
+
+7. **Step 7: Experimentation**
+   - Investigate the effects of different exposome variables on mRNA and methylation activity.
+   - Determine if there are specific genes or pathways involved.
+
+8. **Step 8: Results Interpretation**
+   - Use bioinformatics analyses (like GSEA, GO) to interpret the model's findings.
+
+9. **Step 9: Visualization**
+   - Develop visualizations to represent the results clearly (e.g., time-altered line plots).
+
+## 🌐 Process Flowchart
+
+For a visual representation of our process, you can view our [concept flowchart](https://lucid.app/lucidspark/1ffd7682-7663-43bf-a491-b70901eb0e65/edit?invitationId=inv_a8695350-5641-4533-905f-f5fa7ed34993&page=0_0).
+
+## 💡 Tips
+
+## 🔗 Useful Links
+
+- [Installing or updating to the latest version of the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+- [Exposome: Epigenetics and autoimmune diseases - PubMed](https://pubmed.ncbi.nlm.nih.gov/39097180/)
+- [Mutual regulation of microRNAs and DNA methylation in human cancers](https://pmc.ncbi.nlm.nih.gov/articles/PMC5406215/)
+
+## 🔮 Future Aims
+
+- **Standardization and Packaging**
+  - Package the model into a standardized, reusable module.
+  - Prepare a Python package for easy distribution and use.
+
+- **Publication and Sharing**
+  - Publish the findings and the Python package for the broader research community.
+
+- **Documentation and Reproducibility**
+  - Ensure all steps are well-documented to allow for reproducibility of the results.
+  - Include instructions for setting up the computational environment and running the analysis.
+
+## 👤 Contributors
+
+- Alishba Nadeem
+
+## 👤 Contributors
+
+- Alishba Nadeem
+
+- Halina Krzystek
+- Kirtan Dave
+- Paul Kao
+- Macciej Kowalski
+- Aung
+- Diya
+- Alishba Nadeem
